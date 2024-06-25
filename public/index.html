@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,4 +87,94 @@
       });
     </script>
   </body>
+=======
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome to Firebase - Manish</title>
+	<!-- update the version number as needed -->
+	<script defer src="/__/firebase/10.12.2/firebase-app-compat.js"></script>
+	<!-- include only the Firebase features as you need -->
+	<!-- <script defer src="/__/firebase/10.12.2/firebase-auth-compat.js"></script> -->
+	<!-- <script defer src="/__/firebase/10.12.2/firebase-database-compat.js"></script>
+	<script defer src="/__/firebase/10.12.2/firebase-firestore-compat.js"></script>
+	<script defer src="/__/firebase/10.12.2/firebase-functions-compat.js"></script> -->
+	<script defer src="/__/firebase/10.12.2/firebase-messaging-compat.js"></script>
+	<!-- <script defer src="/__/firebase/10.12.2/firebase-storage-compat.js"></script> -->
+	<!-- <script defer src="/__/firebase/10.12.2/firebase-analytics-compat.js"></script>
+	<script defer src="/__/firebase/10.12.2/firebase-remote-config-compat.js"></script>
+	<script defer src="/__/firebase/10.12.2/firebase-performance-compat.js"></script>
+	<script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+
+		body {
+			background: rgb(63, 94, 251);
+			background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+			color: #fff;
+			font-family: "Quicksand", cursive;
+			font-optical-sizing: auto;
+			font-weight: 400;
+			font-style: normal;
+			padding: 0;
+			margin: 0 auto;
+		}
+
+		.main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.main>p {
+			font-size: 28px;
+		}
+
+		#token_div,
+		#permission_div {
+			margin: 20px;
+			padding: 10px;
+			border: 1px solid #ddd;
+		}
+
+		#token_div,
+		#permission_div {
+			display: none;
+		}
+	</style>
+	<script type="module" src='main.js'></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/firebase-messaging-sw.js')
+				.then((registration) => {
+					console.log('Service Worker registered with scope:', registration.scope);
+				}).catch((error) => {
+					console.log('Service Worker registration failed:', error);
+				});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<p>Firebase Cloud Messaging</p>
+		<main>
+			<div id='token_div' style='display: none;'>
+				<h4>Registration Token</h4>
+				<p id='token' style='word-break: break-all;'></p>
+				<button id='delete-token-button'
+					class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored'> Delete Token </button>
+			</div>
+			<div id='permission_div'>
+				<h4>Needs Permission</h4>
+				<button id='request-permission-button' class='request-permission-button'>Request Permission </button>
+			</div>
+			<div id='messages'></div>
+		</main>
+	</div>
+</body>
+
+>>>>>>> dafd1b4 (removed-sceret)
 </html>
